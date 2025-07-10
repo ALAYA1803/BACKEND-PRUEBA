@@ -133,7 +133,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("https://trip-match-2025.web.app", 
+            policy.WithOrigins(
+                    "https://trip-match-2025.web.app",
+                    "https://jocular-swan-9e401f.netlify.app",
                     "http://localhost:5173",          
                     "http://localhost:8080")
                 .AllowAnyHeader()
